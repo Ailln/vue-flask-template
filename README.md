@@ -2,6 +2,31 @@
 
 📦 一个快速搭建 Web 应用的模版，前端使用渐进式框架 Vue，后端使用微框架 Flask。
 
+## 目录
+
+```
+.
+├── README.md
+├── LICENSE # 许可证
+├── .gitignore
+├── front # 前端
+│   ├── README.md
+│   ├── babel.config.js
+│   ├── package.json # 前端依赖
+│   ├── public
+│   │   ├── favicon.ico
+│   │   └── index.html
+│   ├── src
+│   │   ├── App.vue
+│   │   ├── assets # 静态资源
+│   │   │   └── logo.png
+│   │   └── main.js
+│   └── yarn.lock
+└── back # 后端
+    ├── app.py
+    └── requirements.txt # 后端依赖
+```
+
 ## 使用
 
 1. 点击本项目右上角的绿色按钮 `Use this template`（使用此模板），输入名称和说明，完成创建。
@@ -40,34 +65,30 @@
 
 6. 根据你的需求修改代码。
 
-## 目录
+## 附加
 
-```
-.
-├── README.md
-├── LICENSE # 许可证
-├── .gitignore
-├── front # 前端
-│   ├── README.md
-│   ├── babel.config.js
-│   ├── package.json # 前端依赖
-│   ├── public
-│   │   ├── favicon.ico
-│   │   └── index.html
-│   ├── src
-│   │   ├── App.vue
-│   │   ├── assets # 静态资源
-│   │   │   └── logo.png
-│   │   └── main.js
-│   └── yarn.lock
-└── back # 后端
-    ├── app.py
-    └── requirements.txt # 后端依赖
-```
+### 添加 iView UI
+
+1. 添加库
+
+    ```bash
+    cd front
+    yarn add iview
+    ```
+
+2. 在 `/front/src/main.js` 中的 `new Vue()` 之前添加
+
+    ```javascript
+    import iView from 'iview'
+    import 'iview/dist/styles/iview.css'
+    
+    Vue.use(iView)
+    ```
 
 ## 参考
 
 - [vue-cli guide](https://cli.vuejs.org/zh/guide/)
+- [iView UI](https://www.iviewui.com/)
 - [flask document](https://dormousehole.readthedocs.io/en/latest/)
 - [如何安装 Node 开发环境？](https://v2ai.cn/linux/2018/11/11/LX-10.html)
 - [如何安装 Python 开发环境？](https://v2ai.cn/linux/2018/04/29/LX-2.html)
