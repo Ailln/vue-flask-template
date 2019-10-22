@@ -1,6 +1,6 @@
 # Vue Flask Template
 
-📦 一个快速搭建 Web 应用的模版，前端使用渐进式框架 Vue，后端使用微框架 Flask。
+📦 一个快速搭建 Web 应用的模版！前端使用渐进式框架 [Vue](https://github.com/vuejs/vue)，后端使用微框架 [Flask](https://github.com/pallets/flask)。
 
 ## 使用方法
 
@@ -91,6 +91,7 @@
 
 ## 参考
 
+- [vue document](https://cn.vuejs.org/v2/guide/)
 - [vue-cli guide](https://cli.vuejs.org/zh/guide/)
 - [iView UI](https://www.iviewui.com/)
 - [flask document](https://dormousehole.readthedocs.io/en/latest/)
