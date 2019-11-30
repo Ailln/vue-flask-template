@@ -67,28 +67,28 @@
 
 ## 附加
 
-### 添加 iView UI
+### 添加 View UI
 
 1. 添加库
 
     ```bash
     cd front
-    yarn add iview
+    yarn add view-design
     ```
 
 2. 在 `/front/src/main.js` 中的 `new Vue()` 之前添加
 
     ```javascript
-    import iView from 'iview'
-    import 'iview/dist/styles/iview.css'
-    
-    Vue.use(iView)
+    import ViewUI from 'view-design'
+    import 'view-design/dist/styles/iview.css'
+
+    Vue.use(ViewUI)
     ```
 
 ## 参考
 
 - [vue-cli guide](https://cli.vuejs.org/zh/guide/)
-- [iView UI](https://www.iviewui.com/)
+- [View UI](https://www.iviewui.com/)
 - [flask document](https://dormousehole.readthedocs.io/en/latest/)
 - [如何安装 Node 开发环境？](https://v2ai.cn/linux/2018/11/11/LX-10.html)
 - [如何安装 Python 开发环境？](https://v2ai.cn/linux/2018/04/29/LX-2.html)
