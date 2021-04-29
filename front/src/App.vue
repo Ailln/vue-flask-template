@@ -1,48 +1,22 @@
 <template>
-    <div id="app">
-        <h1>{{messageFromGetMethod}}</h1>
-        <h1>{{messageFromPostMethod}}</h1>
-    </div>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3 + Vite + Flask" />
 </template>
 
-<script>
-    export default {
-        data() {
-            return {
-                messageFromGetMethod: "",
-                messageFromPostMethod: ""
-            }
-        },
-        created() {
-            const that = this
-            that.axios
-                .get("/hello")
-                .then((res) => {
-                    that.messageFromGetMethod = res.data
-                })
-                .catch((error) => {
-                    alert(error)
-                })
-            that.axios
-                .post("/hello")
-                .then((res) => {
-                    that.messageFromPostMethod = res.data
-                })
-                .catch((error) => {
-                    alert(error)
-                })
+<script setup>
+import HelloWorld from './components/HelloWorld.vue'
 
-        }
-    }
+// This starter template is using Vue 3 experimental <script setup> SFCs
+// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
 </script>
 
 <style>
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>

@@ -12,12 +12,14 @@
     git clone https://github.com/Ailln/vue-flask-template.git --depth 1
     ```
 
-3. 安装环境依赖，本项目需要 Node 环境 和 Python 环境，如果对这部分不熟悉的看本文档最后的参考文章。
+3. 安装环境依赖，本项目需要 Node 环境和 Python 环境，如果对这部分不熟悉的看本文档最后的参考文章。
+
+   > 注意：版本要求 Node version 12+, Python version 3.6+ 。
 
     ```bash
     # 前端环境依赖安装
     cd front
-    yarn
+    npm install
     
     # 后端环境依赖安装
     cd back
@@ -29,14 +31,14 @@
     ```bash
     # 启动前端
     cd front
-    yarn serve
+    npm run dev
     
     # 启动后端
     cd back
     python app.py
     ```
 
-5. 在浏览器中打开：`http://localhost:8080/` 即可预览。
+5. 在浏览器中打开：`http://localhost:3000/` 即可预览。
 
 6. 根据你的需求修改代码。
 
@@ -44,46 +46,24 @@
 
 ```
 .
+├── front # 前端
+│    ├── package.json # 前端依赖
+│    ├── package-lock.json
+│    ├── public
+│    ├── src
+│    │    ├── App.vue # 主页面
+│    │    ├── components # 子组件
+│    │    │    └── HelloWorld.vue
+│    │    ├── assets # 静态资源
+│    │    └── main.js
+│    └── vite.config.js
+├── back # 后端
+│    ├── app.py
+│    └── requirements.txt # 后端依赖
 ├── README.md
 ├── LICENSE # 许可证
-├── .gitignore
-├── front # 前端
-│   ├── README.md
-│   ├── babel.config.js
-│   ├── package.json # 前端依赖
-│   ├── public
-│   │   ├── favicon.ico
-│   │   └── index.html
-│   ├── src
-│   │   ├── App.vue
-│   │   ├── assets # 静态资源
-│   │   │   └── logo.png
-│   │   └── main.js
-│   └── yarn.lock
-└── back # 后端
-    ├── app.py
-    └── requirements.txt # 后端依赖
+└── .gitignore
 ```
-
-## 附加
-
-### 添加 View UI
-
-1. 添加库
-
-    ```bash
-    cd front
-    yarn add view-design
-    ```
-
-2. 在 `/front/src/main.js` 中的 `new Vue()` 之前添加
-
-    ```javascript
-    import ViewUI from 'view-design'
-    import 'view-design/dist/styles/iview.css'
-
-    Vue.use(ViewUI)
-    ```
 
 ## 许可
 
@@ -91,9 +71,8 @@
 
 ## 参考
 
-- [vue document](https://cn.vuejs.org/v2/guide/)
-- [vue-cli guide](https://cli.vuejs.org/zh/guide/)
-- [View UI](https://www.iviewui.com/)
+- [Vue3 教程](https://v3.cn.vuejs.org/)
+- [Vite 官方中文文档](https://cn.vitejs.dev/guide/why.html)
 - [flask document](https://dormousehole.readthedocs.io/en/latest/)
 - [如何安装 Node 开发环境？](https://v2ai.cn/linux/2018/11/11/LX-10.html)
 - [如何安装 Python 开发环境？](https://v2ai.cn/linux/2018/04/29/LX-2.html)
