@@ -61,7 +61,7 @@
 │    ├── app.py
 │    └── requirements.txt # 后端依赖
 ├── README.md
-├── LICENSE # 许可证
+├── LICENSE
 └── .gitignore
 ```
 
@@ -73,6 +73,6 @@
 
 - [Vue3 教程](https://v3.cn.vuejs.org/)
 - [Vite 官方中文文档](https://cn.vitejs.dev/guide/why.html)
-- [flask document](https://dormousehole.readthedocs.io/en/latest/)
-- [如何安装 Node 开发环境？](https://v2ai.cn/linux/2018/11/11/LX-10.html)
-- [如何安装 Python 开发环境？](https://v2ai.cn/linux/2018/04/29/LX-2.html)
+- [Flask 官方文档](https://flask.palletsprojects.com/en/1.1.x/)
+- [如何安装 Node 开发环境？](https://www.v2ai.cn/2018/11/11/linux/7-node-install/)
+- [如何安装 Python 开发环境？](https://www.v2ai.cn/2018/04/29/python/2-python-install/)
